@@ -41,7 +41,7 @@ exports.handler = async (event) => {
             "content": "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬 7개 지역입니다```"
         }
 
-        const discordUrl = "DISCORD_KAZE_URI";
+        const discordUrl = "DISCORD_BOT_NINAVE Update";
         
         if(event.bot === "groupOne"){
             const result = await axios.post(discordUrl, groupOne);
