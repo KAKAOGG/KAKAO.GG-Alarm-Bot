@@ -32,7 +32,7 @@ exports.handler = async (event) => {
 
     const groupOneFour = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 로웬, 엘가시아 6개 지역입니다```",
+        "```아르테미스, 욘, 베른 북부, 베른 남부, 로웬, 엘가시아 6개 지역입니다``` \n > 매력쩌는여자: <https://www.youtube.com/channel/UC5uwl0Dnba3dyAGVnUdVgkw>",
     };
 
     const groupTwoThree = {
@@ -42,12 +42,12 @@ exports.handler = async (event) => {
 
     const groupTwoFour = {
       content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 로웬 6개 지역입니다```",
+        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 로웬 6개 지역입니다``` \n > 매력쩌는여자: <https://www.youtube.com/channel/UC5uwl0Dnba3dyAGVnUdVgkw>",
     };
 
     const groupThreeFour = {
       content:
-        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬 7개 지역입니다```",
+        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬 7개 지역입니다``` \n > 매력쩌는여자: <https://www.youtube.com/channel/UC5uwl0Dnba3dyAGVnUdVgkw>",
     };
 
     const discordUrl = "WEB_HOOK";
