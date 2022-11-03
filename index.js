@@ -10,29 +10,37 @@ exports.handler = async (event) => {
         "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아 5개 지역입니다```",
     };
 
+    // 2022-11-03 플레체 추가 (=== ZeroTwo)
     const groupTwo = {
       content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 5개 지역입니다```",
+        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 플레체 6개 지역입니다```",
     };
 
+    // 2022-11-03 플레체 추가 (=== ZeroThree)
     const groupThree = {
       content:
-        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카 6개 지역입니다```",
+        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체 7개 지역입니다```",
     };
 
     const groupOneTwo = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 9개 지역입니다```",
+        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 10개 지역입니다```",
     };
 
     const groupOneThree = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카 10개 지역입니다```",
+        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카 11개 지역입니다```",
     };
 
+    const groupZeroOneThree = {
+      content:
+        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체 12개 지역입니다```",
+    };
+
+    // 2022-11-03 플레체 추가 (=== ZeroOneFour)
     const groupOneFour = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 로웬, 엘가시아 6개 지역입니다```",
+        "```아르테미스, 욘, 베른 북부, 베른 남부, 로웬, 엘가시아, 플레체 7개 지역입니다```",
     };
 
     const groupTwoThree = {
@@ -40,14 +48,21 @@ exports.handler = async (event) => {
         "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카 11개 지역입니다```",
     };
 
+    // 2022-11-03 플레체 추가
+    const groupZeroTwoThree = {
+      content:
+        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체 12개 지역입니다```",
+    };
+
     const groupTwoFour = {
       content:
         "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 로웬 6개 지역입니다```",
     };
 
+    // 2022-11-03 플레체 추가 (=== ZeroThreeFour)
     const groupThreeFour = {
       content:
-        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬 7개 지역입니다```",
+        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬, 플레체 8개 지역입니다```",
     };
 
     const discordUrl = "WEB_HOOK";
@@ -86,6 +101,16 @@ exports.handler = async (event) => {
 
     if (event.bot === "groupThreeFour") {
       const result = await axios.post(discordUrl, groupThreeFour);
+    }
+
+    // 2022-11-03 플레체 새로운 케이스 추가
+    if (event.bot === "groupZeroTwoThree") {
+      const result = await axios.post(discordUrl, groupZeroTwoThree);
+    }
+
+    // 2022-11-03 플레체 새로운 케이스 추가
+    if (event.bot === "groupZeroOneThree") {
+      const result = await axios.post(discordUrl, groupZeroOneThree);
     }
 
     console.log("정상 작동");
