@@ -10,8 +10,13 @@ exports.handler = async (event) => {
         "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아 5개 지역입니다```",
     };
 
-    // 2022-11-03 플레체 추가 (=== ZeroTwo)
     const groupTwo = {
+      content:
+        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 5개 지역입니다```",
+    };
+
+    // 2022-11-03 플레체 추가 (=== ZeroTwo)
+    const groupZeroTwo = {
       content:
         "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 플레체 6개 지역입니다```",
     };
@@ -111,6 +116,11 @@ exports.handler = async (event) => {
     // 2022-11-03 플레체 새로운 케이스 추가
     if (event.bot === "groupZeroOneThree") {
       const result = await axios.post(discordUrl, groupZeroOneThree);
+    }
+
+    // 2022-11-03 플레체 새로운 케이스 추가
+    if (event.bot === "groupZeroTwo") {
+      const result = await axios.post(discordUrl, groupZeroTwo);
     }
 
     console.log("정상 작동");
