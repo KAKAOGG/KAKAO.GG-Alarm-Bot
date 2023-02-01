@@ -97,6 +97,10 @@ exports.handler = async (event) => {
       const result = await axios.post(discordUrl, groupOneThree);
     }
 
+    if (event.bot === "groupZeroOne") {
+      const result = await axios.post(discordUrl, groupZeroOne);
+    }
+
     if (event.bot === "groupOneFour") {
       const result = await axios.post(discordUrl, groupOneFour);
     }
