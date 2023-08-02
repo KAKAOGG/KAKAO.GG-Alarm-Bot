@@ -7,78 +7,22 @@ exports.handler = async (event) => {
   try {
     const groupOne = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아 5개 지역입니다```",
+        "```떠돌이 상인 04시 출현 가능성이 있습니다. 등장 시 5시간 30분 동안 물품을 판매합니다.```",
     };
 
     const groupTwo = {
       content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 5개 지역입니다```",
+        "```떠돌이 상인 10시 출현 가능성이 있습니다. 등장 시 5시간 30분 동안 물품을 판매합니다.```",
     };
 
-    // 2022-11-03 플레체 추가
-    const groupZeroTwo = {
-      content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 플레체 6개 지역입니다```",
-    };
-
-    // 2022-11-03 플레체 추가
-    // 2023-02-18 볼다이크 추가
     const groupThree = {
       content:
-        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체, 볼다이크 8개 지역입니다```",
+        "```떠돌이 상인 16시 출현 가능성이 있습니다. 등장 시 5시간 30분 동안 물품을 판매합니다.```",
     };
 
-    const groupOneTwo = {
+    const groupFour = {
       content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어 10개 지역입니다```",
-    };
-
-    // 2023-02-18 볼다이크 추가
-    const groupOneThree = {
-      content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 볼다이크 12개 지역입니다```",
-    };
-
-    const groupZeroOne = {
-      content:
-        "```플레체, 아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아 6개 지역입니다```",
-    };
-
-    // 2023-02-18 볼다이크 추가
-    const groupZeroOneThree = {
-      content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 엘가시아, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체, 볼다이크 13개 지역입니다```",
-    };
-
-    // 2022-11-03 플레체 추가 (=== ZeroOneFour)
-    const groupOneFour = {
-      content:
-        "```아르테미스, 욘, 베른 북부, 베른 남부, 로웬, 엘가시아, 플레체 7개 지역입니다```",
-    };
-
-    // 2023-02-18 볼다이크 추가
-    const groupTwoThree = {
-      content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 볼다이크 12개 지역입니다```",
-    };
-
-    // 2022-11-03 플레체 추가
-    // 2023-02-18 볼다이크 추가
-    const groupZeroTwoThree = {
-      content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 플레체, 볼다이크 13개 지역입니다```",
-    };
-
-    const groupTwoFour = {
-      content:
-        "```페이튼, 루테란 동부, 유디아, 애니츠, 슈샤이어, 로웬 6개 지역입니다```",
-    };
-
-    // 2022-11-03 플레체 추가
-    // 2023-02-18 볼다이크 추가
-    const groupThreeFour = {
-      content:
-        "```루테란 서부, 루테란 동부, 토토이크, 아르데타인, 로헨델, 파푸니카, 로웬, 플레체, 볼다이크 9개 지역입니다```",
+        "```떠돌이 상인 22시 출현 가능성이 있습니다. 등장 시 5시간 30분 동안 물품을 판매합니다.```",
     };
 
     const discordUrl = "WEB_HOOK";
@@ -95,47 +39,8 @@ exports.handler = async (event) => {
       const result = await axios.post(discordUrl, groupThree);
     }
 
-    if (event.bot === "groupOneTwo") {
-      const result = await axios.post(discordUrl, groupOneTwo);
-    }
-
-    if (event.bot === "groupOneThree") {
-      const result = await axios.post(discordUrl, groupOneThree);
-    }
-
-    if (event.bot === "groupZeroOne") {
-      const result = await axios.post(discordUrl, groupZeroOne);
-    }
-
-    if (event.bot === "groupOneFour") {
-      const result = await axios.post(discordUrl, groupOneFour);
-    }
-
-    if (event.bot === "groupTwoThree") {
-      const result = await axios.post(discordUrl, groupTwoThree);
-    }
-
-    if (event.bot === "groupTwoFour") {
-      const result = await axios.post(discordUrl, groupTwoFour);
-    }
-
-    if (event.bot === "groupThreeFour") {
-      const result = await axios.post(discordUrl, groupThreeFour);
-    }
-
-    // 2022-11-03 플레체 새로운 케이스 추가
-    if (event.bot === "groupZeroTwoThree") {
-      const result = await axios.post(discordUrl, groupZeroTwoThree);
-    }
-
-    // 2022-11-03 플레체 새로운 케이스 추가
-    if (event.bot === "groupZeroOneThree") {
-      const result = await axios.post(discordUrl, groupZeroOneThree);
-    }
-
-    // 2022-11-03 플레체 새로운 케이스 추가
-    if (event.bot === "groupZeroTwo") {
-      const result = await axios.post(discordUrl, groupZeroTwo);
+    if (event.bot === "groupFour") {
+      const result = await axios.post(discordUrl, groupFour);
     }
 
     console.log("정상 작동");
